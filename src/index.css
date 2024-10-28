@@ -1,0 +1,120 @@
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+
+
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column ;
+  gap: 16px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.sidebar button {
+  border-radius: 5px;
+  padding-top: 8px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  -webkit-border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 2px solid #2196F3; /* Add border color */
+}
+.sidebar button:hover{
+  background:#2196F3;
+  color: white;
+}
+
+.canvas {
+  flex-grow: 1;
+  position: relative;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.element {
+  position: absolute;
+  /*border: 1px dashed #d3d3d3;
+  */border-radius: 3px;
+  cursor: move;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+.resize-handle.left {
+  left: -5px; /* Position the left handle outside the element */
+}
+
+.resize-handle.right {
+  right: -5px; /* Position the right handle outside the element */
+}
+
+.selected {
+  outline: 2px solid blue;
+  position: relative; /* Ensure child elements are positioned relative to this container */
+}
+
+.modification-tools {
+  margin-left: 20px;
+  padding: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #ccc;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+ font-weight: 600;
+}
+
+.text textarea{
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+
+.resize-handle {
+  width: 7px;
+  height: 17%;
+  background: #2196F3;
+  position: absolute;
+  cursor: ew-resize;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* Initially hidden */
+}
+
+
+.selected .resize-handle {
+  display: block;
+}
